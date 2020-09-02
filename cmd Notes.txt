@@ -1,0 +1,103 @@
+ @creating a project folder
+cd/
+cd xampp\htdocs\
+laravel new laravelTask
+
+1.@change the directory into the project folder
+cd/
+cd xampp\htdocs\laravelTask
+	
+2.@start the server 
+php artisan serve		
+
+@for terminal = cnt + `
+
+@for command library = php artisan
+/////////Database work
+@set database name on my peoject .env file 
+@for migration library help =
+php artisan help make:migration
+//////Making New 
+@for making controller = 
+1.php artisan make:controller UserController
+//////////
+@for ui design
+composer require laravel/ui
+php artisan ui:auth
+php artisan ui bootstrap
+/install node.js Softwr from node.js site
+npm install && npm run dev
+Edit with https://www.youtube.com/watch?v=agJCKi88t2c
+@for migration library help =
+php artisan make:controller Admin
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@for controller with edit delete options =
+php artisan make:controller SongsController --resource
+then must add the route:
+php artisan route:list
+
+
+
+@for table making ...........call migration-table name is(songs) =
+1.php artisan make:migration create_my_songs_table --create=songs (/////giving table name)
+2.colounm edit korte hole edit that
+3.php artisan migrate 
+
+@for intert data
+1.php artisan tinker
+2.DB::table('songs')->insert(['title'=>'closer','artist'=>'chainsmoker','created_at'=>new DateTime,'updated_at'=>new DateTime]);
+or
+DB::insert('insert into users (name,email,password) values (?, ?, ?)', ['ami', 'ami@gmail.com', 'passwrd',]);
+
+*@for get data	
+DB::table('songs')->get();	
+///DB::table('songs')->where('id',2)->get();
+
+*@for getting data on front.model making,table name songs.
+1.php artisan make:model song
+2.php artisan tinker
+3.App\song::all();
+
+@for table making ,table name'users' , passports =
+1.php artisan make:migration create_my_users_table --create=users ////(='users'giving table name)
+2.php artisan make:migration create_my_passports_table --create=passports
+3.php artisan migrate 
+
+@for intert data
+1.php artisan tinker
+2.DB::table('users')->insert(['name'=>'kaiser','created_at'=>new DateTime,'updated_at'=>new DateTime]);
+
+@for one2 one relation(join table show) 
+1.php artisan make:model user
+& php artisan make:model passport
+2.php artisan serve 
+3.model pg a one2 one/many2many reltion likhbo
+4.App\user::find(2)->passport;       ...... (passport)eta codes er function calling name
+
+
+ public function passport()
+	{
+		return $this->hasOne(Passport::class);
+		//one to one relation hasOne(...);
+		//hasOne(Passport::class)=hasOne(App\passport) app er vitorer class
+	}
+	public function mobile()
+	{
+		return $this->hasMany(Mobile::class);
+		
+	}
+	public function roles()
+	{
+		return $this->belogsToMany(role::class);
+		
+	}
+
