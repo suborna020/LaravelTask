@@ -62,7 +62,7 @@ class PortalOperation extends Controller
     {
         $data['result_info'] = Oex_result::where('id', $id)->get()->first();
         //echo $session_data = Session::get('portal_session');
-        $data['student_info'] = Oex_portal::select(['Oex_portals.*', 'oex_results.user_id as user_id', 'oex_results.created_at as emx_started'])
+        $data['student_info'] = Oex_portal::select(['Oex_portals.*', 'oex_results.user_id as user_id'])
             ->join('oex_results', 'Oex_portals.id', '=', 'oex_results.user_id')
             ->get()->first();
         // echo "<pre>";

@@ -43,8 +43,8 @@
                                     <td>{{ $student_info->mobile_no }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Exam Started schedule</td>
-                                    <td>{{ $student_info->emx_started }}</td>
+                                    <td>Exam completed on</td>
+                                    <td>{{ $result_info->updated_at }}</td>
                                 </tr>
                             </table>
                             <hr>

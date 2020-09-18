@@ -13,6 +13,8 @@
 	php artisan make:auth
 	php artisan migrate   (for create database table)
 @for terminal = cnt + `
+@for controler making 
+	php artisan make:controller StudentController
 @for json data
 	{"option1":"Brahmaputra","option2":"Padma","option3":"Surma"}
 @for command library = php artisan
