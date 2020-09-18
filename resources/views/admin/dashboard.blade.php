@@ -252,21 +252,7 @@
                                             <!-- /.contacts-list-info -->
                                         </a>
                                     </li>
-                                    <!-- End Contact Item -->
-                                    <li>
-                                        <a href="#">
-                                            <img class="contacts-list-img" src="dist/img/user3-128x128.jpg">
 
-                                            <div class="contacts-list-info">
-                                                <span class="contacts-list-name">
-                                                    Nadia Jolie
-                                                    <small class="contacts-list-date float-right">2/20/2015</small>
-                                                </span>
-                                                <span class="contacts-list-msg">I'll call you back at...</span>
-                                            </div>
-                                            <!-- /.contacts-list-info -->
-                                        </a>
-                                    </li>
                                     <!-- End Contact Item -->
                                     <li>
                                         <a href="#">
@@ -444,23 +430,7 @@
                                         <i class="fas fa-trash-o"></i>
                                     </div>
                                 </li>
-                                <li>
-                                    <span class="handle">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </span>
-                                    <div class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo6" id="todoCheck6">
-                                        <label for="todoCheck6"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1
-                                        month</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
+
                             </ul>
                         </div>
                         <!-- /.card-body -->

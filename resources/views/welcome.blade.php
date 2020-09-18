@@ -73,10 +73,12 @@
             @auth
             <a href="{{ url('/portal/portalDashboard') }}">Home</a>
             @else
+            {{-- <a href="{{ url('login') }}">Login</a> --}}
             <a href="{{ url('/portal/portalLogin') }}">Login</a>
 
             @if (Route::has('register'))
-            <a href="{{ route('register') }}">Register</a>
+            {{-- <a href="{{ route('register') }}">Register</a> --}}
+            <a href="{{ url('/portal/portalSignup') }}">Register</a>
             @endif
             @endauth
         </div>

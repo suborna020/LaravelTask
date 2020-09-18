@@ -20,9 +20,10 @@ Route::get('/', 'userController@welcome');
 
 Auth::routes();
 
+// POrtal works
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'Admin@index');
-Route::get('/admin/exm_category', 'Admin@exm_category');
+Route::get('/admin/exm_question', 'Admin@exm_question');
 // POrtal works
 Route::get('portal/portalSignup', 'PortalController@portalSignup');
 Route::post('portal/portalSignup_sub', 'PortalController@portalSignup_sub');

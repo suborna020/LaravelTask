@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="{{url('assets/plugins/summernote/summernote-bs4.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{-- table design link  --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -188,12 +191,23 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/exm_category')}}" class="nav-link">
+                            <a href="{{ url('admin/exm_question')}}" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Catagory
                                 </p>
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('logout') }} " class=" nav-link"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="nav-icon fas fa-th"></i>
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none;">
+                                <form id="logout-form" action="{{route('logout')}}" method="POST" style="display:none;">
+                                    {{ csrf_field() }}
+                                </form>
                         </li>
 
                         {{-- <li class="nav-item has-treeview menu-open">
@@ -298,6 +312,17 @@
     <script src="{{url('assets/dist/js/pages/dashboard.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{url('assets/dist/js/demo.js')}}"></script>
+    <!-- my js file link -->
+    <script src="{{url('assets/js/custom.js')}}"></script>
+    {{-- table design link --}}
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.datatable').dataTable();
+      });
+    </script>
+    {{-- table design end --}}
 </body>
 
 </html>

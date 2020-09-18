@@ -21,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    // public const HOME = '/home'; //user panel after login
+    //public const HOME = '/admin'; //user panel after login
     public const HOME = '/portal/portalDashboard'; //admin panel after login
 
 

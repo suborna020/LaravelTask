@@ -1,4 +1,20 @@
-
+$(document).on('submit', '.database_operation', function () {
+    var url = $(this).attr('action');
+    var data = $(this).serialize();
+    $.post(url, data, function (fb) {
+        var resp = JSON.parse(fb);
+        if (resp.status == 'true') {
+            alert(resp.message);
+            setTimeout(function () {
+                window.location.href = resp.reload;
+            }, 1000);
+        }
+        else {
+            alert(resp.message);
+        }
+    })
+    return false;
+});
 
 var interval;
 function countdown() {

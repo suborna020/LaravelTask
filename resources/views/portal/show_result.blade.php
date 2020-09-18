@@ -29,28 +29,25 @@
                     <div class="card mt-4">
                         <div class="card-body">
                             <h2>Basic Information:</h2><br>
-                            {{-- <table class="table">
+                            <table class="table">
                                 <tr>
                                     <td>Name</td>
                                     <td>{{ $student_info->name }}</td>
-                            </tr>
-                            <tr>
-                                <td>E-Mail</td>
-                                <td>{{ $student_info->email }}</td>
-                            </tr>
-                            <tr>
-                                <td>DOB</td>
-                                <td>{{ $student_info->dob }}</td>
-                            </tr>
-                            <tr>
-                                <td>Exam Name</td>
-                                <td>{{ $student_info->title }}</td>
-                            </tr>
-                            <tr>
-                                <td>Exam Date</td>
-                                <td>{{ $student_info->exam_date }}</td>
-                            </tr>
-                            </table> --}}
+                                </tr>
+                                <tr>
+                                    <td>E-Mail</td>
+                                    <td>{{ $student_info->email }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile No.</td>
+                                    <td>{{ $student_info->mobile_no }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Exam Started schedule</td>
+                                    <td>{{ $student_info->emx_started }}</td>
+                                </tr>
+                            </table>
+                            <hr>
                             <h2>Result Information</h2>
                             <table class="table">
                                 <tr>

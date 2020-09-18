@@ -12,9 +12,9 @@ class Admin extends Controller
         // die;
         return view('admin.dashboard');
     }
-    public function exm_category()
+    public function exm_question()
     {
 
-        return view('admin.exm_category');
+        return view('admin.exm_question');
     }
 }

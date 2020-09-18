@@ -32,6 +32,7 @@ class PortalController extends Controller
                 $portal->email = $request->email;
                 $portal->mobile_no = $request->mobile_no;
                 $portal->password = $request->password;
+                $portal->status = 1;
                 $portal->save();
                 $arr = array('status' => 'true', 'message' => 'Success', 'reload' => url('portal/portalLogin'));
             }
