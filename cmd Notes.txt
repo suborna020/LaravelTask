@@ -11,7 +11,7 @@
 	php artisan serve		
 3.@authentication 
 	php artisan make:auth
-	php artisan migrate   (for create database table)
+	php artisan migrate   (for create database table for auth tables)
 @for terminal = cnt + `
 @for controler making 
 	php artisan make:controller StudentController
@@ -27,15 +27,20 @@ php artisan help make:migration
 1.php artisan make:controller UserController
 //////////
 @for ui design
-composer require laravel/ui
-php artisan ui:auth
-php artisan ui bootstrap
-/install node.js Softwr from node.js site
-npm install && npm run dev
-Edit with https://www.youtube.com/watch?v=agJCKi88t2c
+	composer require laravel/ui
+	php artisan ui:auth
+	php artisan ui bootstrap
+	/install node.js Softwr from node.js site
+	npm install && npm run dev
+	Edit with https://www.youtube.com/watch?v=agJCKi88t2c
 @for migration library help =
-php artisan make:controller Admin
+	php artisan make:controller Admin
 
+@for table making ...........call migration-table name is(oex_student) =
+	1.php artisan make:model oex_student -m  (/////given table oex_students ,model oex_student)
+	2.colounm edit korte hole edit that
+	3.php artisan migrate
+	
 
 
 

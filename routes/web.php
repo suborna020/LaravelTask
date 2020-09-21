@@ -24,6 +24,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'Admin@index');
 Route::get('/admin/exm_question', 'Admin@exm_question');
+Route::post('/admin/exm_new_question', 'Admin@exm_new_question');
+
 // POrtal works
 Route::get('portal/portalSignup', 'PortalController@portalSignup');
 Route::post('portal/portalSignup_sub', 'PortalController@portalSignup_sub');

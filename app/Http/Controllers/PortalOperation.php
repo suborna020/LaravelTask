@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Session;
 
 use Validator;
-use App\Oex_students;
-use App\Oex_portal;
+use App\oex_student;
 use App\Oex_exam_question_master;
 use App\model\Oex_result;
 
@@ -21,7 +20,7 @@ class PortalOperation extends Controller
         if (!Session::get('portal_session')) {
             return redirect(url('portal/portalLogin'));
         }
-        $data['portal_exams'] = Oex_portal::where('status', '1')->get()->toArray();
+        $data['portal_exams'] = oex_student::where('status', '1')->get()->toArray();
         return view('portal.dashboard', $data);
     }
     public function exmForm()
@@ -62,8 +61,8 @@ class PortalOperation extends Controller
     {
         $data['result_info'] = Oex_result::where('id', $id)->get()->first();
         //echo $session_data = Session::get('portal_session');
-        $data['student_info'] = Oex_portal::select(['Oex_portals.*', 'oex_results.user_id as user_id'])
-            ->join('oex_results', 'Oex_portals.id', '=', 'oex_results.user_id')
+        $data['student_info'] = oex_student::select(['oex_students.*', 'oex_results.user_id as user_id'])
+            ->join('oex_results', 'oex_students.id', '=', 'oex_results.user_id')
             ->get()->first();
         // echo "<pre>";
         // print_r($data);

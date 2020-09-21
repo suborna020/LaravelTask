@@ -17,6 +17,9 @@
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
+            <div class="print_btn" style="text-align: center">
+                <button onclick="window.print()">Print</button>
+            </div>
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -43,8 +46,12 @@
                                     <td>{{ $student_info->mobile_no }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Exam completed on</td>
-                                    <td>{{ $result_info->updated_at }}</td>
+                                    <td>Exam completed date</td>
+                                    <td>{{ date('d M,Y',strtotime($result_info->updated_at) ) }}</td>
+                                    {{-- printing date of today --}}
+                                    <td>/<?php echo date('Y-m-d'); ?></td>
+
+
                                 </tr>
                             </table>
                             <hr>
