@@ -40,6 +40,8 @@ php artisan help make:migration
 	1.php artisan make:model oex_student -m  (/////given table oex_students ,model oex_student)
 	2.colounm edit korte hole edit that
 	3.php artisan migrate
+
+https://www.youtube.com/watch?v=GnsbF91kl1k&list=PLV1nl4kfrf6GexbVpqfQc8zjv4JLAhI4K&index=55
 	
 
 
